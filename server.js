@@ -12,13 +12,24 @@ server.use(morgan('dev'));
 server.use(express.json());
 server.use(express.static('public'));
 
-async function post(path, params={}) {
+async function post(path, params = {}) {
   const res = await fetch(`https://uscloser.com/api/${path}`, {
     method: 'POST',
     headers: {
+      'accept': 'application/json, text/plain, */*',
+      'accept-language': 'en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7',
       'Content-Type': 'application/json',
       'Auth-Token': process.env.TOKEN,
+      'origem': 'App-web',
+      'sec-fetch-dest': 'empty',
+      'sec-fetch-mode': 'cors',
+      'sec-fetch-site': 'same-site',
+      'security-token': 'eHBiTWZvWVROc2RlQm04N2VGNWpzZz09',
     },
+    'referrer': 'https://minhaconta.uscloser.com/',
+    'referrerPolicy': 'strict-origin-when-cross-origin',
+    'mode': 'cors',
+    'credentials': 'omit',
     body: JSON.stringify(params),
   });
 
@@ -31,7 +42,13 @@ server.get('/packages', async (req, res) => {
   const packages = await Promise.all(packageData.map(async p => {
     const tracking = await post('rastreio', { rastreio: p.rastreio });
     if (!tracking.error) {
-      [ p.rastreio ] = tracking.track;
+      [p.detalhes] = tracking.track;
+    }
+    console.log('p.id', p.id);
+    const detalhes = await post('getenviodetalhes', { id: p.id });
+    console.log('detalhes', detalhes);
+    if (detalhes.items) {
+      p.itens = detalhes.items.map(p => ({ title: p.title, imagem: p.imagem }));
     }
     return p;
   }));
