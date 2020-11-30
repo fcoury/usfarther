@@ -38,20 +38,21 @@ async function post(path, params = {}) {
 
 server.get('/packages', async (req, res) => {
   const json = await post('getenviosweb');
-  const packageData = json.items.slice(1, 10);
+  const packageData = json.items.slice(0, 10);
   const packages = await Promise.all(packageData.map(async p => {
     const tracking = await post('rastreio', { rastreio: p.rastreio });
+    p.entregue = tracking.entregue;
+    // console.log('tracking', tracking);
     if (!tracking.error) {
       [p.detalhes] = tracking.track;
     }
-    console.log('p.id', p.id);
     const detalhes = await post('getenviodetalhes', { id: p.id });
-    console.log('detalhes', detalhes);
     if (detalhes.items) {
       p.itens = detalhes.items.map(p => ({ title: p.title, imagem: p.imagem }));
+      p.pesototal = detalhes.pesototal.toFixed(2);
     }
     return p;
-  }));
+  })); // .filter(p => !p.entregue);
   console.log('packages', packages);
 
   res.json({ packages });
