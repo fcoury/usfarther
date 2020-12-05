@@ -11,6 +11,9 @@
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1"
   },
+  "scripts": {
+    "start": "node index.js"
+  },
   "devDependencies": {
     "eslint": "^7.13.0",
     "eslint-plugin-mocha-no-only": "^1.1.1"
