@@ -38,7 +38,7 @@ async function post(path, params = {}) {
 
 server.get('/packages', async (req, res) => {
   const json = await post('getenviosweb');
-  const packageData = json.items.slice(0, 10);
+  const packageData = json.items.slice(0, 20);
   const packages = await Promise.all(packageData.map(async p => {
     const tracking = await post('rastreio', { rastreio: p.rastreio });
     p.entregue = tracking.entregue;
@@ -49,11 +49,10 @@ server.get('/packages', async (req, res) => {
     const detalhes = await post('getenviodetalhes', { id: p.id });
     if (detalhes.items) {
       p.itens = detalhes.items.map(p => ({ title: p.title, imagem: p.imagem }));
-      p.pesototal = detalhes.pesototal.toFixed(2);
+      p.pesototal = detalhes.pesototal;
     }
     return p;
   })); // .filter(p => !p.entregue);
-  console.log('packages', packages);
 
   res.json({ packages });
 });

@@ -7,27 +7,38 @@ const Packages = () => {
     fetch('/packages').then(r => {
       return r.json();
     }).then(res => {
+      console.log('packages', res.packages);
       setPackages(res.packages);
       setLoading(false);
     });
   }, []);
 
+  if (loading) {
+    return <div class="loading"><img src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif" /></div>;
+  }
+
   const rows = packages.filter(p => !p.entregue).map(p => {
-    const itens = p.itens && p.itens
-      .filter(i => i && i.title && i.title.length && i.title !== 'Keyboard Kit' && i.title !== 'Keyboard Caps')
-      .map(i => i.title).join(', ');
+    const rawItems = p.itens && p.itens
+      .filter(i => i && i.title && i.title.length && i.title !== 'Keyboard Kit' && i.title !== 'Keyboard Caps');
+    const itens = rawItems.map(i => <li>{i.title}</li>);
     const images = p.itens && p.itens.map(i => <img width="150" src={i.imagem} />);
     return (
       <tr key={p.id}>
-        <td>{p.referencia}</td>
-        <td>{p.rastreio}</td>
-        <td>{p.data_hora_envio}</td>
-        <td>{p.detalhes ? p.detalhes.entry_date_str : null}</td>
-        <td>{p.detalhes ? p.detalhes.track_description : null}</td>
+        {/* <td>{p.referencia}</td> */}
         <td>
-          {(p.pesototal * 1.0).toFixed(2)}lbs/{(p.pesototal * 0.453592).toFixed(2)}kg
+          {p.rastreio}<br/>
+          {p.data_hora_envio}
         </td>
-        <td>{itens}</td>
+        <td>
+          {p.detalhes ? p.detalhes.track_description : null}<br/>
+          {p.detalhes ? p.detalhes.entry_date_str : null}
+        </td>
+        <td>
+          {rawItems.length ? <ul style={{ marginBottom: 20 }}>{itens}</ul> : null}
+          <div>
+            {(p.pesototal * 1.0).toFixed(2)}lbs/{(p.pesototal * 0.453592).toFixed(2)}kg
+          </div>
+        </td>
         <td>{images}</td>
       </tr>
     );
