@@ -8,16 +8,22 @@ const Packages = () => {
       return r.json();
     }).then(res => {
       console.log('packages', res.packages);
-      setPackages(res.packages);
+      setPackages(res.packages.filter(p => !p.entregue));
       setLoading(false);
     });
   }, []);
 
   if (loading) {
-    return <div class="loading"><img src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif" /></div>;
+    return <div className="loading"><img src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif" /></div>;
   }
 
-  const rows = packages.filter(p => !p.entregue).map(p => {
+  const onClickTracking = idx => e => {
+    const p = packages[idx];
+    p.expanded = !p.expanded;
+    setPackages([...packages.slice(0, idx), p, ...packages.slice(idx+1)]);
+  };
+
+  const rows = packages.map((p, i) => {
     const rawItems = p.itens && p.itens
       .filter(i => i && i.title && i.title.length && i.title !== 'Keyboard Kit' && i.title !== 'Keyboard Caps');
     const itens = rawItems.map(i => <li>{i.title}</li>);
@@ -30,8 +36,16 @@ const Packages = () => {
           {p.data_hora_envio}
         </td>
         <td>
-          {p.detalhes ? p.detalhes.track_description : null}<br/>
-          {p.detalhes ? p.detalhes.entry_date_str : null}
+          {!p.expanded && <div>
+            {p.detalhes ? p.detalhes.track_description : null}<br/>
+            {p.detalhes ? p.detalhes.entry_date_str : null}
+          </div>}
+          {p.expanded && <ul>
+            {p.rastreios && p.rastreios.map(r => <li>{r.track_description}</li>)}
+          </ul>}
+          <div onClick={onClickTracking(i)}>
+            {p.expanded ? 'Hide' : 'Show'}
+          </div>
         </td>
         <td>
           {rawItems.length ? <ul style={{ marginBottom: 20 }}>{itens}</ul> : null}
