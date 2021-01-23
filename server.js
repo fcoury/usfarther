@@ -42,9 +42,9 @@ server.get('/packages', async (req, res) => {
   const packages = await Promise.all(packageData.map(async p => {
     const tracking = await post('rastreio', { rastreio: p.rastreio });
     p.entregue = tracking.entregue;
-    // console.log('tracking', tracking);
     if (!tracking.error) {
       [p.detalhes] = tracking.track;
+      p.rastreios = tracking.track;
     }
     const detalhes = await post('getenviodetalhes', { id: p.id });
     if (detalhes.items) {
