@@ -8,7 +8,7 @@ const Packages = () => {
       return r.json();
     }).then(res => {
       console.log('packages', res.packages);
-      setPackages(res.packages.filter(p => !p.entregue));
+      setPackages(res.packages.filter(p => !p.entregue && !(p.status && p.status.includes('Cancelado'))));
       setLoading(false);
     });
   }, []);
@@ -20,7 +20,7 @@ const Packages = () => {
   const onClickTracking = idx => e => {
     const p = packages[idx];
     p.expanded = !p.expanded;
-    setPackages([...packages.slice(0, idx), p, ...packages.slice(idx+1)]);
+    setPackages([...packages.slice(0, idx), p, ...packages.slice(idx + 1)]);
   };
 
   const rows = packages.map((p, i) => {
@@ -32,12 +32,12 @@ const Packages = () => {
       <tr key={p.id}>
         {/* <td>{p.referencia}</td> */}
         <td>
-          {p.rastreio}<br/>
+          {p.rastreio}<br />
           {p.data_hora_envio}
         </td>
         <td>
           {!p.expanded && <div>
-            {p.detalhes ? p.detalhes.track_description : null}<br/>
+            {p.detalhes ? p.detalhes.track_description : null}<br />
             {p.detalhes ? p.detalhes.entry_date_str : null}
           </div>}
           {p.expanded && <ul>
