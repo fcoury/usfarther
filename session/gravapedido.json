@@ -1,0 +1,106 @@
+{
+  "itens": [
+    {
+      "itemid": "809343",
+      "descricao": "Kepler FC65",
+      "valordeclarado": 0,
+      "qtdedeclarado": 0,
+      "qtde": 1,
+      "familia": "JJH",
+      "blockepacket": "0",
+      "image": "https://uscloser.com/media/produtos/2021_06_08_03_00_52_1453741622.jpg"
+    },
+    {
+      "itemid": "809341",
+      "descricao": "Keyboard Kit",
+      "valordeclarado": 48,
+      "qtdedeclarado": 1,
+      "qtde": 1,
+      "familia": "JJH",
+      "blockepacket": "0",
+      "image": "https://uscloser.com/media/produtos/2021_06_08_03_00_25_1523470039.jpg"
+    }
+  ],
+  "extras": [
+    {
+      "id": 1,
+      "title": "Seguro (3% do valor declarado)",
+      "extra": false,
+      "peso": 0,
+      "valor": 0.03,
+      "tipo": 1
+    },
+    {
+      "id": 10,
+      "title": "Seguro (10% do valor do frete)",
+      "extra": "",
+      "peso": 0,
+      "valor": 0.1,
+      "tipo": 3
+    },
+    {
+      "id": 2,
+      "title": "Retirar preços das etiquetas?",
+      "extra": "",
+      "peso": 0,
+      "valor": 0,
+      "tipo": 2
+    },
+    {
+      "id": 3,
+      "title": "Remover inserçoes, anúncios e extras da loja?",
+      "extra": "",
+      "peso": 0,
+      "valor": 0,
+      "tipo": 2
+    },
+    {
+      "id": 4,
+      "title": "Retirar produtos da caixa/embalagem original? Por exemplo tênis, brinquedos e acessórios de bebê.",
+      "extra": "",
+      "peso": 0,
+      "valor": 0,
+      "tipo": 2
+    },
+    {
+      "id": 5,
+      "title": "Enviar invoice/fatura original?",
+      "extra": "",
+      "peso": 0,
+      "valor": 0,
+      "tipo": 2
+    },
+    {
+      "id": 7,
+      "title": "Proteger produtos frágeis com plástico bolha.",
+      "extra": false,
+      "peso": 0.2,
+      "valor": 1,
+      "tipo": 2
+    },
+    {
+      "id": 8,
+      "title": "Fechar toda a caixa com fita para ter uma proteção extra?",
+      "extra": "",
+      "peso": 0.1,
+      "valor": 1,
+      "tipo": 2
+    },
+    {
+      "id": 9,
+      "title": "Caixa parede dupla",
+      "extra": false,
+      "peso": 0,
+      "valor": 3,
+      "tipo": 2
+    }
+  ],
+  "endereco": "bc348d3d7b5058b58098645fde58e7b16aff704fa827e6ce45118a38123fbade37eba64fd53dab40d63db6fe74dc0fbd7eb627c8189c0979afd91aa958997c22njNKP1zv6GTkTq0jxlMVqJXfYE40VouEiEVfL7B_XX4.",
+  "forma_envio": "6",
+  "comentarios": "",
+  "totaldeclarado": 48,
+  "tipoembalagem": 1,
+  "declararfrete": false,
+  "documento": "226.978.508-80",
+  "fotocaixa": false
+}

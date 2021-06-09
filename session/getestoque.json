@@ -1,0 +1,250 @@
+{
+  "armazenamento": 366,
+  "diasparavencerprime": 30,
+  "diasparavencer": 119,
+  "items": [
+    {
+      "id": "808487",
+      "obscaixa": "",
+      "data_hora_add": "08\/06\/2021 07:18",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "5DNG0FWJOU8",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2021_06_08_07_18_53_985074195.jpg",
+      "imagens_extras": false,
+      "peso": "0,2600",
+      "pesototal": "0,2600",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 1,
+      "blockprod": false
+    },
+    {
+      "id": "804350",
+      "obscaixa": "",
+      "data_hora_add": "03\/06\/2021 10:46",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "CFTQNHRDV4H",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2021_06_03_10_46_02_1711445141.jpg",
+      "imagens_extras": false,
+      "peso": "8,8500",
+      "pesototal": "8,8500",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 6,
+      "blockprod": false
+    },
+    {
+      "id": "803617",
+      "obscaixa": "",
+      "data_hora_add": "02\/06\/2021 08:07",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "RQNH5BO1JF0",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2021_06_02_08_07_04_1314042447.jpg",
+      "imagens_extras": false,
+      "peso": "0,0500",
+      "pesototal": "0,0500",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 7,
+      "blockprod": false
+    },
+    {
+      "id": "802961",
+      "obscaixa": "",
+      "data_hora_add": "01\/06\/2021 16:19",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "EDF5WT3SSPJ",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2021_06_01_04_19_54_940173684.jpg",
+      "imagens_extras": false,
+      "peso": "0,0800",
+      "pesototal": "0,0800",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 8,
+      "blockprod": false
+    },
+    {
+      "id": "802392",
+      "obscaixa": "",
+      "data_hora_add": "01\/06\/2021 13:45",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "O8WYASMVFAQ",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2021_06_01_01_45_21_660742436.jpg",
+      "imagens_extras": false,
+      "peso": "0,1900",
+      "pesototal": "0,1900",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 8,
+      "blockprod": false
+    },
+    {
+      "id": "801116",
+      "obscaixa": "",
+      "data_hora_add": "31\/05\/2021 07:39",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "LSWZPQV4T27",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2021_05_31_07_39_33_261297483.jpg",
+      "imagens_extras": false,
+      "peso": "2,0400",
+      "pesototal": "2,0400",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 9,
+      "blockprod": false
+    },
+    {
+      "id": "799723",
+      "obscaixa": "",
+      "data_hora_add": "27\/05\/2021 15:26",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "2EKFHZAIYJM",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2021_05_27_03_26_40_911127155.jpg",
+      "imagens_extras": false,
+      "peso": "0,1100",
+      "pesototal": "0,1100",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 13,
+      "blockprod": false
+    },
+    {
+      "id": "686598",
+      "obscaixa": "",
+      "data_hora_add": "15\/12\/2020 13:34",
+      "descricao": "Sem descri\u00e7\u00e3o",
+      "referencia": "LNPRUKZHXAM",
+      "imagem": "https:\/\/uscloser.com\/media\/produtos\/2020_12_15_01_34_12_1687792519.jpg",
+      "imagens_extras": false,
+      "peso": "1,5300",
+      "pesototal": "1,5300",
+      "qtde": "1",
+      "bloqueiaepacket": "0",
+      "restrito": "0",
+      "dias": 176,
+      "blockprod": false
+    }
+  ],
+  "saldo": "43,50",
+  "grupos": [
+    {
+      "id": "1",
+      "codigo": "AMB",
+      "hs": "870810",
+      "titulo": "P\u00e7s Carro, Moto, Bicicleta"
+    },
+    {
+      "id": "2",
+      "codigo": "BYC",
+      "hs": "392330",
+      "titulo": "Produtos para Beb\u00ea"
+    },
+    {
+      "id": "3",
+      "codigo": "BEL",
+      "hs": "330410",
+      "titulo": "Produtos de Beleza"
+    },
+    {
+      "id": "4",
+      "codigo": "CYD",
+      "hs": "852349",
+      "titulo": "CD'S e DVD'S"
+    },
+    {
+      "id": "5",
+      "codigo": "VYC",
+      "hs": "621010",
+      "titulo": "Roupas e Acess\u00f3rios"
+    },
+    {
+      "id": "6",
+      "codigo": "COA",
+      "hs": "847329",
+      "titulo": "Pe\u00e7as de Computador"
+    },
+    {
+      "id": "7",
+      "codigo": "PAE",
+      "hs": "854231",
+      "titulo": "Eletr\u00f4nicos"
+    },
+    {
+      "id": "8",
+      "codigo": "JYR",
+      "hs": "910211",
+      "titulo": "Rel\u00f3gios e J\u00f3ias"
+    },
+    {
+      "id": "9",
+      "codigo": "TEL",
+      "hs": "851770",
+      "titulo": "Celulares"
+    },
+    {
+      "id": "10",
+      "codigo": "ZAP",
+      "hs": "640420",
+      "titulo": "T\u00eanis e Cal\u00e7ados"
+    },
+    {
+      "id": "11",
+      "codigo": "JJH",
+      "hs": "950300",
+      "titulo": "Brinquedos e Jogos"
+    },
+    {
+      "id": "12",
+      "codigo": "MSR",
+      "hs": "300650",
+      "titulo": "Vitaminas e Suplementos"
+    },
+    {
+      "id": "13",
+      "codigo": "DYO",
+      "hs": "950691",
+      "titulo": "Produtos Esportivos"
+    },
+    {
+      "id": "14",
+      "codigo": "ADO",
+      "hs": "392610",
+      "titulo": "Little Trees"
+    }
+  ],
+  "blacklist": [
+    "perfume",
+    "colonia",
+    "colic calm",
+    "cologne",
+    "battery",
+    "power bank",
+    "powerbank",
+    "electric scooter",
+    "hoverboard",
+    "electric skateboard",
+    "electric bike",
+    "thermometer",
+    "vape",
+    "drugs",
+    "bomb",
+    "gas",
+    "paintball",
+    "nail polish",
+    "knife",
+    "gun",
+    "spray",
+    "aerosol",
+    "ink",
+    "paint",
+    "pressure",
+    "cylinder"
+  ]
+}
