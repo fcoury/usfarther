@@ -41,7 +41,7 @@ const Packages = () => {
             {p.detalhes ? p.detalhes.entry_date_str : null}
           </div>}
           {p.expanded && <ul>
-            {p.rastreios && p.rastreios.map(r => <li>{r.track_description}</li>)}
+            {p.rastreios && p.rastreios.map(r => <li>{r.entry_date_str} {r.track_description}</li>)}
           </ul>}
           <div onClick={onClickTracking(i)}>
             {p.expanded ? 'Hide' : 'Show'}

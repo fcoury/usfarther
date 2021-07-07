@@ -6,6 +6,7 @@ const server = express();
 
 const morgan = require('morgan');
 const cors = require('cors');
+const striptags = require('striptags');
 
 server.use(cors());
 server.use(morgan('dev'));
@@ -44,7 +45,7 @@ server.get('/packages', async (req, res) => {
     p.entregue = tracking.entregue;
     if (!tracking.error) {
       [p.detalhes] = tracking.track;
-      p.rastreios = tracking.track;
+      p.rastreios = tracking.track.map(t => Object.assign({}, t, { track_description: striptags(t.track_description) }));
     }
     const detalhes = await post('getenviodetalhes', { id: p.id });
     if (detalhes.items) {
