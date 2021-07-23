@@ -49,7 +49,9 @@ server.get('/packages', async (req, res) => {
     }
     const detalhes = await post('getenviodetalhes', { id: p.id });
     if (detalhes.items) {
-      p.itens = detalhes.items.map(p => ({ title: p.title, imagem: p.imagem }));
+      const declarado = detalhes.items.find(it => parseInt(it.qtdedeclarado, 10) > 0);
+      p.itens = detalhes.items.map(p => ({ title: p.title, imagem: p.imagem, valor: p.valordeclarado, qtd: p.qtdedeclarado }));
+      p.total = declarado && declarado.valordeclarado;
       p.pesototal = detalhes.pesototal;
     }
     return p;
