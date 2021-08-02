@@ -27,6 +27,7 @@ const Packages = () => {
     const rawItems = p.itens && p.itens.filter(i => i && i.title && parseInt(i.qtd, 10) === 0);
     const itens = rawItems.map(i => <li>{i.title}</li>);
     const images = p.itens && p.itens.map(i => <img width="150" src={i.imagem} />);
+    const desc = p.detalhes && p.detalhes.track_description && p.detalhes.track_description.replace(/(<([^>]+)>)/gi, '');
     return (
       <tr key={p.id}>
         {/* <td>{p.referencia}</td> */}
@@ -37,7 +38,7 @@ const Packages = () => {
         </td>
         <td>
           {!p.expanded && <div>
-            {p.detalhes ? p.detalhes.track_description : null}<br />
+            {desc}<br />
             {p.detalhes ? p.detalhes.entry_date_str : null}
           </div>}
           {p.expanded && <ul>
