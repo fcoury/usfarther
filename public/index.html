@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>US Farther</title>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-    <!-- Don't use this in production: -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-      table {
-        border-collapse: collapse;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <title>US Farther</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-      table tr {
-        border-bottom: 1px solid black;
-      }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-      table tr:last-child {
-        border: 0;
-      }
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+    }
 
-      table td {
-        vertical-align: top;
-        padding: 20px;
-      }
+    table {
+      border-collapse: collapse;
+    }
 
-      ul {
-        padding: 0;
-        margin: 0;
-      }
+    table tr {
+      border-bottom: 1px solid black;
+    }
 
-      .loading {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="text/babel" src="Packages.js"></script>
-    <script type="text/babel">
+    table tr:last-child {
+      border: 0;
+    }
 
-      ReactDOM.render(
-        <Packages />,
-        document.getElementById('root')
-      );
+    table td {
+      vertical-align: top;
+      padding: 20px;
+    }
 
-    </script>
-    <!--
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="Packages.js"></script>
+  <script type="text/babel">
+
+    ReactDOM.render(
+      <Packages />,
+      document.getElementById('root')
+    );
+
+  </script>
+  <!--
       Note: this page is a great way to try React but it's not suitable for production.
       It slowly compiles JSX with Babel in the browser and uses a large development build of React.
 
@@ -63,5 +74,6 @@
       You can also use React without JSX, in which case you can remove Babel:
       https://reactjs.org/docs/react-without-jsx.html
     -->
-  </body>
+</body>
+
 </html>

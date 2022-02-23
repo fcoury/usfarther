@@ -37,6 +37,7 @@ const Packages = () => {
           {p.total}<br />
         </td>
         <td>
+          {p.apelido ? <div style={{ marginBottom: 20 }}><b>{p.apelido}</b></div> : null}
           {!p.expanded && <div>
             {desc}<br />
             {p.detalhes ? p.detalhes.entry_date_str : null}
